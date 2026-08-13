@@ -671,6 +671,202 @@ footer {
   background-color: var(--success);
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 10px 18px;
   font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 5px rgba(46, 125, 50, 0.2);
+}
+
+#announcement-list {
+  display: grid;
+  gap: 4px;
+}
+
+.header-action {
+  padding: 3px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+  border-radius: 20px;
+}
+
+.header-action:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.announcement-modal-content {
+  max-width: 820px;
+  padding: 24px;
+}
+
+.modal-close-button {
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 0;
+}
+
+.announcement-modal-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 0 28px 20px 0;
+}
+
+.modal-eyebrow {
+  color: var(--secondary-dark);
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.announcement-modal-heading h3,
+.announcement-form h4 {
+  color: var(--primary);
+}
+
+.announcement-count {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  background: var(--background);
+  border-radius: 12px;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.announcement-manager-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 22px;
+}
+
+.announcement-form {
+  border-right: 1px solid var(--border);
+  padding-right: 22px;
+}
+
+.announcement-form h4 {
+  margin-bottom: 14px;
+}
+
+.announcement-form textarea,
+.announcement-form input[type="date"] {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.announcement-form textarea:focus,
+.announcement-form input[type="date"]:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 2px rgba(83, 75, 174, 0.1);
+}
+
+.announcement-form label span {
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: normal;
+}
+
+.date-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.announcement-form-actions,
+.announcement-record-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.announcement-form-actions {
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.secondary-button {
+  background: var(--background);
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.secondary-button:hover {
+  background: var(--border-light);
+}
+
+.danger-button {
+  background: var(--error-light);
+  color: var(--error);
+  border: 1px solid #ffcdd2;
+}
+
+.danger-button:hover {
+  background: #ffcdd2;
+}
+
+.announcement-management-list {
+  display: grid;
+  gap: 10px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.announcement-record {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--secondary);
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.announcement-record-message {
+  line-height: 1.45;
+  margin-bottom: 7px;
+}
+
+.announcement-record-dates,
+.announcement-empty {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.announcement-record-actions {
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.announcement-record-actions button {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  #user-controls {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .announcement-manager-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .announcement-form {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    padding: 0 0 18px;
+  }
+
+  .announcement-modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
 }
